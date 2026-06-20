@@ -204,7 +204,7 @@ biji-kopi/
 
 **1. Clone repositori**
 ```bash
-git clone <url-repo>
+git clone https://github.com/veryepiccindeed/biji-clean.git
 cd biji-kopi
 ```
 
