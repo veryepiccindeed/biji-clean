@@ -1,5 +1,8 @@
 # ☕ BIJI — Blockchain Integrated Journey Intelligence
 
+Pilih Bahasa / Choose Language:
+[Bahasa Indonesia](README.md) | [English](README.en.md)
+---
 > Platform manajemen rantai pasok kopi specialty Indonesia, dengan fokus pada kopi khas **Sulawesi**, yang didukung teknologi blockchain untuk menjamin keaslian dan transparansi setiap batch dari ladang ke tangan pembeli.
 
 ---
@@ -437,8 +440,16 @@ Skenario penting yang wajib di-tes:
 
 
 ## 🤝 Kontribusi
+Proyek ini dikembangkan sebagai proyek akhir akademik (ALP Semester 6) oleh:
+* [@veryepiccindeed](https://github.com/veryepiccindeed) - Backend & DevOps Architect
+* [@bigbosspramana](https://github.com/bigbosspramana) - Frontend & DevOps Engineer
+* [@Apryadi](https://github.com/Apryadi) - UI/UX & Smart Contract Developer
+* [@FranklinJaya2006](https://github.com/FranklinJaya2006) - Database & IoT Engineer
+* [@chaidenfoanto](https://github.com/chaidenfoanto) - ML Engineer
+* [@levinn1](https://github.com/levinn1) - ML Engineer
 
-Proyek ini dikembangkan sebagai tugas akademik (ALP Semester 6). Jika Anda ingin berkontribusi:
+
+Jika Anda ingin berkontribusi:
 
 1. Fork repositori ini
 2. Buat branch fitur: `git checkout -b feature/nama-fitur`
@@ -456,7 +467,7 @@ Proyek ini dikembangkan sebagai tugas akademik (ALP Semester 6). Jika Anda ingin
 
 ## 📄 Lisensi
 
-Proyek ini dibuat untuk keperluan akademik. Lisensi belum ditentukan secara formal.
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ---
 
