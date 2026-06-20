@@ -1,0 +1,155 @@
+  /* BIJI Design Tokens - Based on UI Guide */
+
+  @layer base {
+    :root {
+      /* === WARNA DASAR (Berlaku untuk Semua Pengguna) === */
+      --color-bg-primary: #0F0D0B; /* Background Utama */
+      --color-bg-card: #1C1813; /* Background Kartu */
+      --color-bg-hover: #2A2118; /* Background Melayang */
+      --color-text-primary: #F5EFE6; /* Teks Utama */
+      --color-text-secondary: #A89880; /* Teks Pendukung */
+      --color-text-disabled: #5C4F42; /* Teks Tidak Aktif */
+      --color-border-light: #2E241C; /* Garis Halus */
+      --color-border-input: #4A3728; /* Garis Kolom Isian */
+      --color-accent-green: #08C246; /* Aksen Hijau */
+      --color-error: #D94F4F; /* Merah Error */
+      --color-success: #4CAF7D; /* Hijau Sukses */
+      --color-warning: #E8A838; /* Kuning Peringatan */
+
+      /* === WARNA AKSEN BERDASARKAN ROLE === */
+      /* Petani */
+      --color-role-farmer-primary: #2D6A4F;
+      --color-role-farmer-light: #52B788;
+      --color-role-farmer-bg: #1A3D2E;
+
+      /* Eksportir */
+      --color-role-exporter-primary: #4B3832;
+      --color-role-exporter-light: #8B6355;
+      --color-role-exporter-bg: #2C1F1A;
+
+      /* Pembeli */
+      --color-role-buyer-primary: #B8902A;
+      --color-role-buyer-light: #D4AF5A;
+      --color-role-buyer-bg: #2D2210;
+
+      /* === SPACING === */
+      --spacing-xs: 0.25rem; /* 4px */
+      --spacing-sm: 0.5rem; /* 8px */
+      --spacing-md: 1rem; /* 16px */
+      --spacing-lg: 1.5rem; /* 24px */
+      --spacing-xl: 2rem; /* 32px */
+      --spacing-2xl: 3rem; /* 48px */
+
+      /* === TYPOGRAPHY === */
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+      /* === FONT SIZES === */
+      --text-xs: 11px;
+      --text-sm: 13px;
+      --text-base: 15px;
+      --text-lg: 17px;
+      --text-xl: 20px;
+      --text-2xl: 24px;
+      --text-3xl: 32px;
+      --text-4xl: 40px;
+
+      /* === BORDER RADIUS === */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+
+      /* === TRANSITIONS === */
+      --transition-fast: 150ms;
+      --transition-base: 250ms;
+      --transition-slow: 350ms;
+    }
+
+    /* Typography Styles */
+    body {
+      @apply bg-[#0F0D0B] text-[#F5EFE6] font-sans;
+      font-family: var(--font-sans);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+    }
+
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    code, kbd, samp, pre {
+      font-family: var(--font-mono);
+    }
+
+    /* Form inputs - simplified: remove global decorative background/border/rounded to allow page-scoped styles */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+      @apply text-[#F5EFE6] transition-colors;
+
+      &::placeholder {
+        @apply text-[#A89880];
+      }
+
+      &:disabled {
+        @apply cursor-not-allowed;
+      }
+    }
+
+    /* Hide Alpine x-cloak elements until JS initializes */
+    [x-cloak] { display: none !important; }
+
+    /* Buttons */
+    button, .btn {
+      @apply font-medium transition-all duration-200;
+      font-family: var(--font-sans);
+
+      &:focus {
+        @apply outline-none;
+      }
+    }
+
+    /* Links */
+    a {
+      @apply text-[#08C246] hover:text-[#52B788] transition-colors;
+
+      &:focus {
+        @apply outline-none;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* Utility classes for dynamic role theming */
+  .theme-farmer {
+    --theme-primary: var(--color-role-farmer-primary);
+    --theme-light: var(--color-role-farmer-light);
+    --theme-bg: var(--color-role-farmer-bg);
+  }
+
+  .theme-exporter {
+    --theme-primary: var(--color-role-exporter-primary);
+    --theme-light: var(--color-role-exporter-light);
+    --theme-bg: var(--color-role-exporter-bg);
+  }
+
+  .theme-buyer {
+    --theme-primary: var(--color-role-buyer-primary);
+    --theme-light: var(--color-role-buyer-light);
+    --theme-bg: var(--color-role-buyer-bg);
+  }
